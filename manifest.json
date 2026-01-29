@@ -1,0 +1,9 @@
+{
+  "name": "Kaç Gün Kaldı?",
+  "short_name": "Kaç Gün?",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": []
+}
