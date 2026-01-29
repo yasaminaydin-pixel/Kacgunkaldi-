@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaç Gün Kaldı?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding-top: 50px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>Kaç Gün Kaldı?</h1>
+  <input type="date" id="tarih">
+  <p id="sonuc"></p>
+
+  <script>
+    const input = document.getElementById("tarih");
+    const sonuc = document.getElementById("sonuc");
+
+    input.addEventListener("change", () => {
+      const secilen = new Date(input.value);
+      const bugun = new Date();
+      const fark = Math.ceil((secilen - bugun) / (1000 * 60 * 60 * 24));
+      sonuc.innerText = fark + " gün kaldı";
+    });
+  </script>
+
+</body>
+</html>
